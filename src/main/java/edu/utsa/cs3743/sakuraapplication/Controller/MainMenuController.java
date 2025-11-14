@@ -1,9 +1,9 @@
-package edu.utsa.cs3743.sakuraapplication;
+package edu.utsa.cs3743.sakuraapplication.Controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class MainMenuController {
     @FXML
     private Label welcomeText;
 
