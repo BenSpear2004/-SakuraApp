@@ -1,0 +1,26 @@
+.root {
+   -fx-background-color: linear-gradient(to bottom, #FFB7C5, #000000);
+   -fx-background-radius: 8;
+}
+
+.CardInfo{
+    -fx-background-radius: 8;
+}
+
+.ExpDate{
+    -fx-background-radius: 8;
+}
+
+.Csv{
+    -fx-background-radius: 8;
+}
+
+.PayBTN{
+    -fx-background-color: black;
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+}
+
+.PayBTN:hover{
+    -fx-effect: dropshadow(gaussian, rgba(204,204,204,0.5), 10, 0.5, 0, 3);
+}
