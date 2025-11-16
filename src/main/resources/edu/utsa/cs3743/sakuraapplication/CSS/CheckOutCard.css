@@ -1,0 +1,15 @@
+.root {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+}
+
+
+.nameLabel{
+        -fx-font-size: 14px;
+        -fx-font-family: "Open Sans";
+}
+
+.QuantityLabel{
+    -fx-font-size: 14px;
+    -fx-font-family: "Open Sans";
+}

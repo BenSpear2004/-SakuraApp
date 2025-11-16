@@ -31,5 +31,10 @@
                 <Insets />
             </opaqueInsets>
         </VBox>
+      <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="back-arrow">
+         <image>
+            <Image url="@../Images/backarrowIcon.jpg" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane prefHeight="66.0" prefWidth="338.0" stylesheets="@../CSS/CheckOutCard.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="338.0" spacing="80.0">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true" />
+            <Label alignment="CENTER" styleClass="nameLabel" text="Name" />
+            <Label styleClass="QuantityLabel" text="Quantiy" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
