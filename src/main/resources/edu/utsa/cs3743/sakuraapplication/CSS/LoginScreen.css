@@ -1,5 +1,5 @@
 .rootPane {
-    -fx-background-color: linear-gradient(to bottom, #000000, #FFB7C5);
+    -fx-background-color: linear-gradient(to bottom, #FFB7C5, #000000);
     -fx-background-radius: 8;
 }
 
