@@ -1,0 +1,67 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom, #FFB7C5, #000000);
+}
+
+.title{
+    -fx-font-size: 24px;
+    -fx-font-family: "Open Sans";
+    -fx-font-weight: bold;
+}
+
+.ScrollPane{
+    -fx-background-color: transparent;
+}
+
+.ScrollPane .viewport{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .increment-button,
+.scroll-pane .decrement-button {
+    -fx-opacity: 0;
+}
+
+.ScrollPane .thumb{
+    -fx-background-color: transparent;
+}
+
+.ScrollPane .scroll-bar:vertical .thumb{
+    -fx-background-color: transparent;
+    -fx-border-color: #000000;
+    -fx-border-radius: 8;
+}
+
+.ScrollPane .scroll-bar{
+    -fx-background-color: transparent;
+}
+
+
+.cartBTN{
+    -fx-background-color: #888888;
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+}
+
+.cartBTN:hover {
+    -fx-effect: dropshadow(gaussian, rgba(204,204,204,0.5), 10, 0.5, 0, 3);
+}
+
+.SearchBTN{
+    -fx-background-color: #888888;
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+}
+
+.SearchBTN:hover {
+    -fx-effect: dropshadow(gaussian, rgba(204,204,204,0.5), 10, 0.5, 0, 3);
+}
+
+.profileBTN{
+    -fx-background-color: #888888;
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+}
+
+.profileBTN:hover {
+    -fx-effect: dropshadow(gaussian, rgba(204,204,204,0.5), 10, 0.5, 0, 3);
+}
