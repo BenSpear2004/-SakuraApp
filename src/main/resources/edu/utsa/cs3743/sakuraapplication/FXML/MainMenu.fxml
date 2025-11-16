@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="622.0" prefWidth="361.0" stylesheets="@../CSS/MainMenu.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3743.sakuraapplication.Controller.MainMenuController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="5.0" prefHeight="573.0" prefWidth="366.0" spacing="70.0" stylesheets="@../CSS/MainMenu.css">
@@ -23,7 +22,7 @@
          </Text>
          <ScrollPane prefHeight="379.0" prefWidth="366.0" styleClass="ScrollPane">
             <content>
-               <FlowPane alignment="TOP_CENTER" hgap="10.0" prefHeight="386.0" prefWidth="366.0" prefWrapLength="366.0" vgap="12.0" />
+               <FlowPane fx:id="menuFlow" alignment="TOP_CENTER" hgap="10.0" prefHeight="386.0" prefWidth="366.0" prefWrapLength="366.0" vgap="12.0" />
             </content>
          </ScrollPane>
       </VBox>

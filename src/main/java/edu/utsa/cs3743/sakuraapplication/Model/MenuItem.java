@@ -1,29 +1,29 @@
 package edu.utsa.cs3743.sakuraapplication.Model;
 
 public class MenuItem {
-    private int itemId;
+//    private int itemId;
     private String name;
-    private String category;
+    private String calories;
     private double price;
-    private boolean available;
+//    private boolean available;
 
     public MenuItem() {}
 
-    public MenuItem(int itemId, String name, String category, double price, boolean available) {
-        this.itemId = itemId;
+    public MenuItem(String name, String calories, double price) {
+//        this.itemId = itemId;
         this.name = name;
-        this.category = category;
+        this.calories = calories;
         this.price = price;
-        this.available = available;
+//        this.available = available;
     }
 
-    public int getItemId() {
-        return itemId;
-    }
-
-    public void setItemId(int itemId) {
-        this.itemId = itemId;
-    }
+//    public int getItemId() {
+//        return itemId;
+//    }
+//
+//    public void setItemId(int itemId) {
+//        this.itemId = itemId;
+//    }
 
     public String getName() {
         return name;
@@ -33,12 +33,12 @@ public class MenuItem {
         this.name = name;
     }
 
-    public String getCategory() {
-        return category;
+    public String getCalories() {
+        return calories;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setCategory(int category) {
+        this.calories = calories;
     }
 
     public double getPrice() {
@@ -49,13 +49,13 @@ public class MenuItem {
         this.price = price;
     }
 
-    public boolean isAvailable() {
-        return available;
-    }
-
-    public void setAvailable(boolean available) {
-        this.available = available;
-    }
+//    public boolean isAvailable() {
+//        return available;
+//    }
+//
+//    public void setAvailable(boolean available) {
+//        this.available = available;
+//    }
 
     @Override
     public String toString() {
