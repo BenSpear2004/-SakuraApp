@@ -1,0 +1,56 @@
+.rootPane {
+    -fx-background-color: linear-gradient(to bottom, #FFB7C5, #000000);
+    -fx-background-radius: 8;
+}
+
+.Btn {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 8;
+    -fx-font-family: "Open Sans";
+}
+
+.Btn:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.5, 0, 3);
+}
+
+.createUserBTN{
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 8;
+    -fx-font-family: "Open Sans";
+}
+
+.createUserBTN:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.5, 0, 3);
+}
+
+.TextField{
+    -fx-background-radius: 8;
+}
+
+.PasswordField {
+    -fx-background-radius: 8;
+}
+
+.ConfirmPasswordField {
+    -fx-background-radius: 8;
+}
+
+.EnterEmailTextField{
+    -fx-background-radius: 8;
+}
+
+.back-arrow {
+    -fx-background-radius: 50;
+    -fx-background-color: white;
+    -fx-padding: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.1, 0, 1);
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.back-arrow:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 15, 0.3, 0, 4);
+    -fx-background-color: #ffffff;
+}
