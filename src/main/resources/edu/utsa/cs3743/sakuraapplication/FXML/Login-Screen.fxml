@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane prefHeight="437.0" prefWidth="314.0" styleClass="rootPane" stylesheets="@../CSS/LoginScreen.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="437.0" prefWidth="314.0" styleClass="rootPane" stylesheets="@../CSS/LoginScreen.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="38.0" prefHeight="415.0" prefWidth="236.0" spacing="25.0">
          <children>
