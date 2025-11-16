@@ -1,5 +1,6 @@
 .root {
     -fx-background-color: linear-gradient(to bottom, #FFB7C5, #000000);
+    -fx-background-radius: 8;
 }
 
 .title{
