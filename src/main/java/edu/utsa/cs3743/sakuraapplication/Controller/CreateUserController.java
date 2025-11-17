@@ -4,8 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
-import java.awt.event.MouseEvent;
+import javafx.scene.input.MouseEvent;
 
 public class CreateUserController {
 
@@ -18,7 +17,7 @@ public class CreateUserController {
     @FXML private TextField enterEmail;
 
     @FXML
-    public void handleBackButton(ActionEvent event){
+    public void handleBackButton(MouseEvent event){
         System.out.println("Back to login");
     }
 
