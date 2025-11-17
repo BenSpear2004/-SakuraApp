@@ -43,6 +43,18 @@ public class CreateUserController {
         // handle errors
         // add user to database
         // take user back to login page
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/Login-Screen.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = new Stage();
+            stage.setTitle("Create Account");
+            stage.setScene(scene);
+            stage.show();
+
+        } catch(IOException e){
+            e.printStackTrace();
+        }
         System.out.println("created user");
     }
 }
