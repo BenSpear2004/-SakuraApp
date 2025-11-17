@@ -16,7 +16,7 @@
       <HBox alignment="BASELINE_LEFT" layoutX="20.0" layoutY="481.0" spacing="18.0">
          <children>
             <Label styleClass="TotalLabel" text="Total:" />
-            <Label alignment="BOTTOM_CENTER" styleClass="PriceLabel" text="Price" textAlignment="CENTER" />
+            <Label fx:id="priceLabel" alignment="BOTTOM_CENTER" styleClass="PriceLabel" text="Price" textAlignment="CENTER" />
          </children>
       </HBox>
    </children>
