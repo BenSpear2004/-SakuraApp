@@ -18,6 +18,7 @@ public class CreateUserController {
 
     @FXML
     public void handleBackButton(MouseEvent event){
+        // take user back to login screen
         System.out.println("Back to login");
     }
 
