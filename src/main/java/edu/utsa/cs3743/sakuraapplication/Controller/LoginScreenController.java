@@ -20,6 +20,8 @@ public class LoginScreenController {
     public void handleLoginButton(ActionEvent event){
         // check if user is already in database
         // if not throw error
+
+        // TODO
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/MainMenu.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
