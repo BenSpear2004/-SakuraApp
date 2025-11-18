@@ -3,11 +3,15 @@ package edu.utsa.cs3743.sakuraapplication.Controller;
 import edu.utsa.cs3743.sakuraapplication.Manager.DataBaseManager;
 import edu.utsa.cs3743.sakuraapplication.Manager.MenuItemManager;
 import edu.utsa.cs3743.sakuraapplication.Model.MenuItem;
+import edu.utsa.cs3743.sakuraapplication.SakuraDBApplication;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -45,4 +49,19 @@ public class MainMenuController implements Initializable{
         }
     }
 
+    @FXML
+    public void handleCartButton(ActionEvent event){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/Cart.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = new Stage();
+            stage.setTitle("Create Account");
+            stage.setScene(scene);
+            stage.show();
+
+        } catch(IOException e){
+            e.printStackTrace();
+        }
+    }
 }
