@@ -29,6 +29,9 @@ public class LoginScreenController {
             Stage stage = new Stage();
             stage.setTitle("Main Menu");
             stage.setScene(scene);
+            stage.setWidth(454);
+            stage.setHeight(655);
+
             stage.show();
         } catch(IOException e) {
             e.printStackTrace();

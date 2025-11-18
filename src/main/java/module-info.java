@@ -3,6 +3,7 @@ module edu.utsa.cs3743.sakuraapplication {
     requires javafx.fxml;
     requires java.sql;
     requires java.desktop;
+    requires javafx.graphics;
 
 
     opens edu.utsa.cs3743.sakuraapplication to javafx.fxml;
