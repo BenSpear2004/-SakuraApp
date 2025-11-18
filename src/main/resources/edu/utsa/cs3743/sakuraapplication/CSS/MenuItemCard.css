@@ -21,3 +21,7 @@
     -fx-font-size: 10px;
     -fx-text-fill: #888888;
 }
+
+.MenuItemRoot:hover{
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+}
