@@ -31,14 +31,13 @@ public class CreateUserController {
             Parent root = fxmlLoader.load();
 
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-            stage.setTitle("Create Account");
+            stage.setTitle("SakuraDB");
             stage.setScene(new Scene(root));
             stage.show();
 
         } catch(IOException e){
             e.printStackTrace();
         }
-        System.out.println("Back to login");
     }
 
     public void handleCreateUserButton(ActionEvent event){
@@ -49,13 +48,12 @@ public class CreateUserController {
             Parent root = fxmlLoader.load();
 
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-            stage.setTitle("Create Account");
+            stage.setTitle("SakuraDB");
             stage.setScene(new Scene(root));
             stage.show();
 
         } catch(IOException e){
             e.printStackTrace();
         }
-        System.out.println("created user");
     }
 }

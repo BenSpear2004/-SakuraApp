@@ -58,7 +58,7 @@ public class MainMenuController implements Initializable{
             Parent root = fxmlLoader.load();
 
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-            stage.setTitle("Create Account");
+            stage.setTitle("SakuraDB");
             stage.setScene(new Scene(root));
             stage.show();
 

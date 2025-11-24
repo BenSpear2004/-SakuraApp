@@ -4,6 +4,8 @@ import edu.utsa.cs3743.sakuraapplication.SakuraDBApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -13,14 +15,13 @@ public class CartController {
 
     @FXML
     public void handleHomeButton(ActionEvent event){
-        // TODO
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/MainMenu.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
+            Parent root = fxmlLoader.load();
 
-            Stage stage = new Stage();
-            stage.setTitle("Main Menu");
-            stage.setScene(scene);
+            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("SakuraDB");
+            stage.setScene(new Scene(root));
             stage.show();
         } catch(IOException e) {
             e.printStackTrace();
@@ -29,14 +30,13 @@ public class CartController {
 
     @FXML
     public void handleCheckoutButton(ActionEvent event){
-        // TODO
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/CheckOut.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
+            FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/Checkout.fxml"));
+            Parent root = fxmlLoader.load();
 
-            Stage stage = new Stage();
-            stage.setTitle("Main Menu");
-            stage.setScene(scene);
+            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("SakuraDB");
+            stage.setScene(new Scene(root));
             stage.show();
         } catch(IOException e) {
             e.printStackTrace();
