@@ -31,7 +31,7 @@ public class CartController {
     @FXML
     public void handleCheckoutButton(ActionEvent event){
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/Checkout.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/CheckOut.fxml"));
             Parent root = fxmlLoader.load();
 
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
