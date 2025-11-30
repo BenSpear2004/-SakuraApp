@@ -61,7 +61,7 @@ public class MainMenuController implements Initializable{
             CartController controller = fxmlLoader.getController();
             controller.loadCartItems();
 
-            Stage stage = new Stage();
+            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Create Account");
             stage.setScene(new Scene(root));
             stage.setWidth(500);
