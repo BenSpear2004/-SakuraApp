@@ -63,7 +63,7 @@ public class MainMenuController implements Initializable{
 
             Stage stage = new Stage();
             stage.setTitle("Create Account");
-            stage.setScene(scene);
+            stage.setScene(new Scene(root));
             stage.setWidth(500);
             stage.setHeight(640);
 

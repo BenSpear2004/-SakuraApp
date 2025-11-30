@@ -39,12 +39,11 @@ public class LoginScreenController {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource(
                         "/edu/utsa/cs3743/sakuraapplication/FXML/MainMenu.fxml"));
-                Scene scene = new Scene(fxmlLoader.load());
+                Parent root = fxmlLoader.load();
 
-
-                Stage stage = new Stage();
-                stage.setTitle("Main Menu");
-                stage.setScene(scene);
+                Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+                stage.setTitle("SakuraDB");
+                stage.setScene(new Scene(root));
                 stage.setWidth(454);
                 stage.setHeight(655);
                 stage.show();
