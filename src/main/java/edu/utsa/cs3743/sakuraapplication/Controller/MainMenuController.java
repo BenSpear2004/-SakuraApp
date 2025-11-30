@@ -57,9 +57,16 @@ public class MainMenuController implements Initializable{
             FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/Cart.fxml"));
             Parent root = fxmlLoader.load();
 
-            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-            stage.setTitle("SakuraDB");
-            stage.setScene(new Scene(root));
+
+            CartController controller = fxmlLoader.getController();
+            controller.loadCartItems();
+
+            Stage stage = new Stage();
+            stage.setTitle("Create Account");
+            stage.setScene(scene);
+            stage.setWidth(500);
+            stage.setHeight(640);
+
             stage.show();
 
         } catch(IOException e){

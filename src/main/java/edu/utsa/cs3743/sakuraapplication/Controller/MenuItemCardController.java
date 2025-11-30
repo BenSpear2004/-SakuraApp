@@ -1,4 +1,5 @@
 package edu.utsa.cs3743.sakuraapplication.Controller;
+import edu.utsa.cs3743.sakuraapplication.Manager.CartManager;
 import edu.utsa.cs3743.sakuraapplication.Model.MenuItem;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -29,7 +30,11 @@ public class MenuItemCardController {
     @FXML
     private Label priceLabel;
 
+    private MenuItem MenuItem;
+
     public void setData(MenuItem item){
+        this.MenuItem = item;
+
         nameLabel.setText(item.getName());
         priceLabel.setText("$" + String.format("%.2f", item.getPrice()));
         caloriesLabel.setText(item.getCalories() + " calories");
@@ -57,6 +62,11 @@ public class MenuItemCardController {
         clip.setArcWidth(20);   // Rounded corner horizontal radius
         clip.setArcHeight(20);  // Rounded corner vertical radius
         itemImage.setClip(clip);
+
+        cardRoot.setOnMouseClicked(event -> {
+            CartManager.getInstance().addItem(MenuItem);
+            System.out.println(MenuItem.getName() + " added to cart!");
+        });
     }
 
 

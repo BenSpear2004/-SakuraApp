@@ -1,15 +1,35 @@
 .root {
     -fx-background-color: transparent;
     -fx-background-radius: 8;
+    -fx-border-color: #CCCCCC;
 }
 
 
 .nameLabel{
         -fx-font-size: 14px;
         -fx-font-family: "Open Sans";
+        -fx-text-fill: #CCCCCC;
 }
 
 .QuantityLabel{
     -fx-font-size: 14px;
     -fx-font-family: "Open Sans";
+    -fx-text-fill: #CCCCCC;
 }
+
+.song-row {
+    -fx-border-color: black;
+    -fx-border-width: 1;  /* bottom border only */
+    -fx-padding: 1;
+}
+
+.song-row:hover {
+    -fx-background-color: rgba(255, 0, 0, 0.05);
+}
+
+.RemoveBTN {
+    -fx-background-color: black;
+    -fx-text-fill: #cccccc;
+    -fx-background-radius: 8;
+}
+

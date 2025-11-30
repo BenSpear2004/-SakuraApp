@@ -19,6 +19,7 @@
             </ImageView>
             <TextField fx:id="enterUser" promptText="Enter User" styleClass="TextField" />
             <PasswordField fx:id="enterPassword" promptText="Enter Password" styleClass="PasswordField" />
+             <Label fx:id="loginError" text="Incorrect username or password" textFill="white" visible="false"/>
             <Button mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="26.0" prefWidth="239.0" styleClass="Btn" text="Login" />
             <Button mnemonicParsing="false" onAction="#handleCreateUserButton" prefHeight="26.0" prefWidth="114.0" styleClass="createUserBTN" text="Create User">
                <VBox.margin>
