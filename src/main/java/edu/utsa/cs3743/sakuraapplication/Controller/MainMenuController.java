@@ -62,7 +62,7 @@ public class MainMenuController implements Initializable{
             controller.loadCartItems();
 
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-            stage.setTitle("Create Account");
+            stage.setTitle("SakuraDB");
             stage.setScene(new Scene(root));
             stage.setWidth(500);
             stage.setHeight(640);
