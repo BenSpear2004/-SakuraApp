@@ -19,9 +19,13 @@
                 </ImageView>
                 <TextField fx:id="enterUser" promptText="Enter User" styleClass="TextField" />
                 <PasswordField fx:id="enterPassword" promptText="Enter Password" styleClass="PasswordField" />
-            <PasswordField fx:id="comfirmPassword" promptText="Confirm Password" styleClass="ConfirmPasswordField" />
+            <PasswordField fx:id="confirmPassword" promptText="Confirm Password" styleClass="ConfirmPasswordField" />
             <TextField fx:id="enterEmail" promptText="Enter Email" styleClass="EnterEmailTextField" />
-                <Label fx:id="CreateUserError" text="Username already exist!" textFill="white" visible="false"/>
+                <StackPane>
+                    <Label fx:id="CreateUserError" text="Username already exist!" textFill="white" visible="false"/>
+                    <Label fx:id="PasswordDoNotMatch" text="Passwords do not match!" textFill="white" visible="false"/>
+                </StackPane>
+
                 <Button mnemonicParsing="false" onAction="#handleCreateUserButton" prefHeight="26.0" prefWidth="239.0" styleClass="Btn" text="Create User" />
             </children>
             <opaqueInsets>
