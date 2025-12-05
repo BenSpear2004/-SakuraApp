@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.YearMonth;
 
 public class CheckOutController {
     @FXML
@@ -51,8 +52,13 @@ public class CheckOutController {
         int month = Integer.parseInt(part[0]);
         int year = Integer.parseInt(part[1]);
 
-        if(month < 12 && year < 25){
-            errorLabel.setText("Invalid expiration date.");
+        year += 2000;
+
+        YearMonth exp = YearMonth.of(year, month);
+        YearMonth now = YearMonth.now();
+
+        if(exp.isBefore(now)){
+            errorLabel.setText("Card is expired.");
             return;
         }
 
