@@ -64,8 +64,6 @@ public class LoginScreenController {
             FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/CreateUser.fxml"));
             Parent root = fxmlLoader.load();
 
-            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-            stage.setTitle("SakuraDB");
             Stage stage =  (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Create Account");
             stage.setScene(new Scene(root));
