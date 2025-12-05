@@ -31,8 +31,6 @@ public class CartController {
             FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/MainMenu.fxml"));
             Parent root = fxmlLoader.load();
 
-            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-            stage.setTitle("SakuraDB");
             Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Main Menu");
             stage.setScene(new Scene(root));
@@ -48,8 +46,6 @@ public class CartController {
             FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/CheckOut.fxml"));
             Parent root = fxmlLoader.load();
 
-            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-            stage.setTitle("SakuraDB");
             Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Checkout Screen");
             stage.setScene(new Scene(root));
