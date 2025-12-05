@@ -35,6 +35,8 @@ public class CreateUserController {
 
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
             stage.setTitle("SakuraDB");
+            Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("Create Account");
             stage.setScene(new Scene(root));
             stage.show();
 
@@ -63,6 +65,8 @@ public class CreateUserController {
 
                 Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
                 stage.setTitle("SakuraDB");
+                Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+                stage.setTitle("Create Account");
                 stage.setScene(new Scene(root));
                 stage.show();
 

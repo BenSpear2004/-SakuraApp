@@ -67,6 +67,9 @@ public class MainMenuController implements Initializable{
             stage.setWidth(500);
             stage.setHeight(640);
 
+            Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("Create Account");
+            stage.setScene(new Scene(root, 500, 640));
             stage.show();
 
         } catch(IOException e){

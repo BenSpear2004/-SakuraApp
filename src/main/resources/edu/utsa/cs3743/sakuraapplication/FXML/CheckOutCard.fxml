@@ -17,7 +17,7 @@
                </HBox.margin></ImageView>
             <Label fx:id="nameLabel" alignment="CENTER" prefHeight="20.0" prefWidth="195.0" styleClass="nameLabel" text="Name" textAlignment="RIGHT" />
             <Label fx:id="quantityLabel" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" styleClass="QuantityLabel" text="Quantiy" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" styleClass="RemoveBTN" text="Remove" />
+            <Button fx:id="RemoveBTN" mnemonicParsing="false" onAction="#HandleRemove" prefHeight="26.0" prefWidth="96.0" styleClass="RemoveBTN" text="Remove" />
          </children>
       </HBox>
    </children>

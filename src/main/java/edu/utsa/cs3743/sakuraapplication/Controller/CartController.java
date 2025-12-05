@@ -33,6 +33,8 @@ public class CartController {
 
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
             stage.setTitle("SakuraDB");
+            Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("Main Menu");
             stage.setScene(new Scene(root));
             stage.show();
         } catch(IOException e) {
@@ -48,6 +50,8 @@ public class CartController {
 
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
             stage.setTitle("SakuraDB");
+            Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("Checkout Screen");
             stage.setScene(new Scene(root));
             stage.show();
         } catch(IOException e) {
@@ -65,6 +69,13 @@ public class CartController {
 
                 CartItemCardController controller = loader.getController();
                 controller.setData(cartItem);
+
+
+                controller.setOnRemoveCallback(() -> {
+                    CartManager.getInstance().removeItem(cartItem);
+                    cartContainer.getChildren().remove(card);
+                    priceLabel.setText("$" + CartManager.getInstance().getTotalPrice());
+                });
 
                 cartContainer.getChildren().add(card);
             } catch(IOException e){
