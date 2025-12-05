@@ -1,10 +1,11 @@
 package edu.utsa.cs3743.sakuraapplication.Manager;
+import java.awt.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class CreateUserManager {
+public class  CreateUserManager {
 
     public static boolean usernameExists(String username) {
         String sql = "SELECT COUNT(*) FROM users WHERE username = ?";
@@ -44,4 +45,12 @@ public class CreateUserManager {
             return false;
         }
     }
+
+    public static boolean confirmPassword(String password, String confirm) {
+        if (password.equals(confirm)) {
+            return true;
+        }
+        return false;
+    }
+
 }
