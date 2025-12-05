@@ -6,8 +6,10 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.control.Button;
 
 public class CartItemCardController {
+
     @FXML
     private ImageView foodImage;
 
@@ -17,7 +19,16 @@ public class CartItemCardController {
     @FXML
     private Label quantityLabel;
 
+    @FXML
+    private Button RemoveBTN;
+
     private CartItem cartItem;
+
+    private Runnable onRemoveCallback;
+
+    public void setOnRemoveCallback(Runnable callback){
+        this.onRemoveCallback = callback;
+    }
 
     public void setData(CartItem cartItem){
         this .cartItem = cartItem;
@@ -49,5 +60,11 @@ public class CartItemCardController {
         clip.setArcHeight(18);     // rounding amount
         foodImage.setClip(clip);
 
+    }
+
+    public void HandleRemove(){
+        if (onRemoveCallback != null){
+            onRemoveCallback.run();
+        }
     }
 }
