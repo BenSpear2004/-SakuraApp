@@ -5,6 +5,7 @@ import edu.utsa.cs3743.sakuraapplication.SakuraDBApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -32,6 +33,8 @@ public class CreateUserController {
             FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/Login-Screen.fxml"));
             Parent root = fxmlLoader.load();
 
+            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("SakuraDB");
             Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Create Account");
             stage.setScene(new Scene(root));
@@ -60,6 +63,8 @@ public class CreateUserController {
                         "/edu/utsa/cs3743/sakuraapplication/FXML/Login-Screen.fxml"));
                 Parent root = fxmlLoader.load();
 
+                Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+                stage.setTitle("SakuraDB");
                 Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
                 stage.setTitle("Create Account");
                 stage.setScene(new Scene(root));

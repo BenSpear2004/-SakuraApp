@@ -5,6 +5,7 @@ import edu.utsa.cs3743.sakuraapplication.SakuraDBApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -29,6 +30,7 @@ public class LoginScreenController {
 
         boolean valid = LoginManager.authenticate(username, password);
 
+
         if (valid){
             System.out.println("Login successful for user: " + username);
             loginError.setVisible(false);
@@ -39,9 +41,11 @@ public class LoginScreenController {
                         "/edu/utsa/cs3743/sakuraapplication/FXML/MainMenu.fxml"));
                 Parent root = fxmlLoader.load();
 
-                Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-                stage.setScene(new Scene(root, 454, 655));
-                stage.setTitle("Main Menu");
+                Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+                stage.setTitle("SakuraDB");
+                stage.setScene(new Scene(root));
+                stage.setWidth(454);
+                stage.setHeight(655);
                 stage.show();
 
             } catch(IOException e) {
@@ -60,6 +64,8 @@ public class LoginScreenController {
             FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/CreateUser.fxml"));
             Parent root = fxmlLoader.load();
 
+            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("SakuraDB");
             Stage stage =  (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Create Account");
             stage.setScene(new Scene(root));

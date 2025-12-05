@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -56,8 +57,15 @@ public class MainMenuController implements Initializable{
             FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/Cart.fxml"));
             Parent root = fxmlLoader.load();
 
+
             CartController controller = fxmlLoader.getController();
             controller.loadCartItems();
+
+            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("SakuraDB");
+            stage.setScene(new Scene(root));
+            stage.setWidth(500);
+            stage.setHeight(640);
 
             Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Create Account");
