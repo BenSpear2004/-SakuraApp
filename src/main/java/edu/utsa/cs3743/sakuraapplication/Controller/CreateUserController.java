@@ -58,11 +58,11 @@ public class CreateUserController {
             try{
                 FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource(
                         "/edu/utsa/cs3743/sakuraapplication/FXML/Login-Screen.fxml"));
-                Scene scene = new Scene(fxmlLoader.load());
+                Parent root = fxmlLoader.load();
 
-                Stage stage = new Stage();
+                Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
                 stage.setTitle("Create Account");
-                stage.setScene(scene);
+                stage.setScene(new Scene(root));
                 stage.show();
 
             } catch(IOException e){
