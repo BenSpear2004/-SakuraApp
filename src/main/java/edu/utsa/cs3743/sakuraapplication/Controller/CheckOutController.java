@@ -33,6 +33,31 @@ public class CheckOutController {
         String csv = csvText.getText();
 
         if(card.isEmpty() || date.isEmpty() || csv.isEmpty()){
+            errorLabel.setText("Please enter all fields.");
+            return;
+        }
+
+        if(!card.matches("\\d{16}")){
+            errorLabel.setText("Invalid credit card number.");
+            return;
+        }
+
+        if(!date.matches("^(0[1-9]|1[0-2])/\\d{2}$")){
+            errorLabel.setText("Invalid expiration date.");
+            return;
+        }
+
+        String[] part = date.split("/");
+        int month = Integer.parseInt(part[0]);
+        int year = Integer.parseInt(part[1]);
+
+        if(month < 12 && year < 25){
+            errorLabel.setText("Invalid expiration date.");
+            return;
+        }
+
+        if(!csv.matches("\\d{3}")){
+            errorLabel.setText("Invalid csv number.");
             return;
         }
 
