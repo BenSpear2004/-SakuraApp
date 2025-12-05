@@ -37,4 +37,8 @@ public class CartManager {
                 .mapToDouble(cartItem -> cartItem.getTotalPrice())
                 .sum();
     }
+
+    public void removeItem(CartItem item){
+        cartItems.remove(item);
+    }
 }

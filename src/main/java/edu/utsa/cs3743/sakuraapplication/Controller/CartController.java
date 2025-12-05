@@ -29,11 +29,11 @@ public class CartController {
         // TODO
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/MainMenu.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
+            Parent root = fxmlLoader.load();
 
-            Stage stage = new Stage();
+            Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Main Menu");
-            stage.setScene(scene);
+            stage.setScene(new Scene(root));
             stage.show();
         } catch(IOException e) {
             e.printStackTrace();
@@ -45,11 +45,11 @@ public class CartController {
         // TODO
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource("/edu/utsa/cs3743/sakuraapplication/FXML/CheckOut.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
+            Parent root = fxmlLoader.load();
 
-            Stage stage = new Stage();
-            stage.setTitle("Main Menu");
-            stage.setScene(scene);
+            Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("Checkout Screen");
+            stage.setScene(new Scene(root));
             stage.show();
         } catch(IOException e) {
             e.printStackTrace();
@@ -66,6 +66,13 @@ public class CartController {
 
                 CartItemCardController controller = loader.getController();
                 controller.setData(cartItem);
+
+
+                controller.setOnRemoveCallback(() -> {
+                    CartManager.getInstance().removeItem(cartItem);
+                    cartContainer.getChildren().remove(card);
+                    priceLabel.setText("$" + CartManager.getInstance().getTotalPrice());
+                });
 
                 cartContainer.getChildren().add(card);
             } catch(IOException e){
