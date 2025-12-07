@@ -51,7 +51,6 @@ public class CheckOutController {
         navigateToMainMenu(event);
     }
 
-    // --- Helper Methods ---
 
     private boolean validateCreditCard() {
         String card = cardText.getText();
@@ -95,8 +94,8 @@ public class CheckOutController {
 
         int cookId = 1;
         int tableNumber = 1;
-        String paymentMethod = "card"; // or "cash" based on UI
-        BigDecimal tipAmount = BigDecimal.ZERO; // can extend to UI input
+        String paymentMethod = "card";
+        BigDecimal tipAmount = BigDecimal.ZERO;
 
         checkoutManager.checkout(cookId, tableNumber, paymentMethod, tipAmount);
     }
