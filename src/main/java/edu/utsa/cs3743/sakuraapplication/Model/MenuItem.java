@@ -1,7 +1,7 @@
 package edu.utsa.cs3743.sakuraapplication.Model;
 
 public class MenuItem {
-//    private int itemId;
+    private int itemId;
     private String name;
     private String calories;
     private double price;
@@ -17,13 +17,13 @@ public class MenuItem {
 //        this.available = available;
     }
 
-//    public int getItemId() {
-//        return itemId;
-//    }
-//
-//    public void setItemId(int itemId) {
-//        this.itemId = itemId;
-//    }
+    public int getItemId() {
+        return itemId;
+    }
+
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
+    }
 
     public String getName() {
         return name;
