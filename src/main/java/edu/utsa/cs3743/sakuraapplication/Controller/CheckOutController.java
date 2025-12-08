@@ -68,7 +68,7 @@ public class CheckOutController {
             return false;
         }
 
-        if (!card.matches("\\d{16}")) {
+        if (!card.matches("\\d{12}")) {
             errorLabel.setText("Invalid credit card number.");
             return false;
         }
