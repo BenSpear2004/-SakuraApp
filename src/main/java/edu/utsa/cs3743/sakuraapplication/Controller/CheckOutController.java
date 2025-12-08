@@ -5,6 +5,7 @@ import edu.utsa.cs3743.sakuraapplication.SakuraDBApplication;
 import edu.utsa.cs3743.sakuraapplication.Manager.CheckOutManager;
 import edu.utsa.cs3743.sakuraapplication.Manager.CartManager;
 
+import edu.utsa.cs3743.sakuraapplication.Util.CurrentUser;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +23,11 @@ import java.sql.SQLException;
 import java.time.YearMonth;
 
 public class CheckOutController {
+
+    @FXML
+    private TextField firstName;
+    @FXML
+    private TextField lastName;
 
     @FXML
     private TextField cardText;
@@ -92,6 +98,16 @@ public class CheckOutController {
     private void performCheckout(Connection conn) throws SQLException {
         CheckOutManager checkoutManager = new CheckOutManager(conn);
 
+        // Change to correct getters once those are complete
+        int customerId = checkoutManager.createOrFetchCustomer(
+                firstName.getText().trim(),
+                lastName.getText().trim(),
+                CurrentUser.getEmail().trim(),
+                "000-000-0000"
+        );
+
+        System.out.println("Customer ID = " + customerId);
+
         int cookId = 1;
         int tableNumber = 1;
         String paymentMethod = "card";
@@ -99,6 +115,8 @@ public class CheckOutController {
 
         checkoutManager.checkout(cookId, tableNumber, paymentMethod, tipAmount);
     }
+
+
 
     private void clearCart() {
         CartManager.getInstance().getCartItems().clear();
