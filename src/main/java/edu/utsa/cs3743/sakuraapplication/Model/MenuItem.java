@@ -9,8 +9,8 @@ public class MenuItem {
 
     public MenuItem() {}
 
-    public MenuItem(String name, String calories, double price) {
-//        this.itemId = itemId;
+    public MenuItem(int itemId, String name, String calories, double price) {
+        this.itemId = itemId;
         this.name = name;
         this.calories = calories;
         this.price = price;
