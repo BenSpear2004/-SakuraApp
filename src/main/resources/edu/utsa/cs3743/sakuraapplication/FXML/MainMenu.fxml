@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="622.0" prefWidth="454.0" stylesheets="@../CSS/MainMenu.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3743.sakuraapplication.Controller.MainMenuController">
+<AnchorPane prefHeight="647.0" prefWidth="972.0" stylesheets="@../CSS/MainMenu.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3743.sakuraapplication.Controller.MainMenuController">
    <children>
-      <VBox alignment="TOP_CENTER" layoutX="2.0" prefHeight="602.0" prefWidth="447.0" spacing="70.0" stylesheets="@../CSS/MainMenu.css">
+      <VBox alignment="TOP_CENTER" layoutX="2.0" prefHeight="602.0" prefWidth="970.0" spacing="70.0" stylesheets="@../CSS/MainMenu.css">
           <padding>
               <Insets top="20.0" />
           </padding>
@@ -20,17 +20,17 @@
                <Insets top="60.0" />
             </VBox.margin>
          </Text>
-         <ScrollPane maxWidth="440.0" prefHeight="379.0" prefWidth="439.0" styleClass="ScrollPane">
+         <ScrollPane maxWidth="758.0" prefHeight="379.0" prefWidth="758.0" styleClass="ScrollPane">
             <content>
-               <FlowPane fx:id="menuFlow" alignment="TOP_CENTER" hgap="10.0" maxWidth="440.0" prefHeight="386.0" prefWidth="447.0" prefWrapLength="366.0" vgap="12.0" />
+               <FlowPane fx:id="menuFlow" alignment="TOP_CENTER" hgap="10.0" maxWidth="759.0" prefHeight="386.0" prefWidth="759.0" prefWrapLength="500.0" vgap="12.0" />
             </content>
          </ScrollPane>
       </VBox>
-      <HBox layoutX="161.0" layoutY="579.0" prefHeight="38.0" prefWidth="196.0" spacing="15.0">
+      <HBox layoutX="704.0" layoutY="602.0" prefHeight="38.0" prefWidth="196.0" spacing="15.0">
          <children>
             <Button mnemonicParsing="false" onAction="#handleCartButton" prefWidth="52.0" styleClass="cartBTN" text="Cart" />
             <Button mnemonicParsing="false" styleClass="SearchBTN" text="Search" />
-            <Button mnemonicParsing="false" prefWidth="52.0" styleClass="profileBTN" text="Profile" />
+            <Button mnemonicParsing="false" onAction="#handleProfileBTN" prefWidth="52.0" styleClass="profileBTN" text="Profile" />
          </children>
       </HBox>
    </children>

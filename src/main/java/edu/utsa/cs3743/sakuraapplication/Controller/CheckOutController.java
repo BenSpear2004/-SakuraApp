@@ -130,9 +130,7 @@ public class CheckOutController {
 
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
             stage.setTitle("SakuraDB");
-            stage.setScene(new Scene(root));
-            stage.setWidth(454);
-            stage.setHeight(655);
+            stage.setScene(new Scene(root, 970, 700));
             stage.show();
 
         } catch (IOException e) {

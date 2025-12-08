@@ -34,6 +34,8 @@ public class CartController {
             Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Main Menu");
             stage.setScene(new Scene(root));
+            stage.setWidth(970);
+            stage.setHeight(700);
             stage.show();
         } catch(IOException e) {
             e.printStackTrace();
@@ -49,6 +51,8 @@ public class CartController {
             Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Checkout Screen");
             stage.setScene(new Scene(root));
+            stage.setWidth(450);
+            stage.setHeight(600);
             stage.show();
         } catch(IOException e) {
             e.printStackTrace();
