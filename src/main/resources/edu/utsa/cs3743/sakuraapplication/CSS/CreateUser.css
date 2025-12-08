@@ -4,8 +4,8 @@
 }
 
 .Btn {
-    -fx-background-color: #000000;
-    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #CCCCCC;
+    -fx-text-fill: #000000;
     -fx-background-radius: 8;
     -fx-font-family: "Open Sans";
 }
@@ -53,4 +53,8 @@
 .back-arrow:hover {
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 15, 0.3, 0, 4);
     -fx-background-color: #ffffff;
+}
+
+.ConfirmationLabel{
+    -fx-text-fill: #CCCCCC;
 }

@@ -64,11 +64,31 @@ public class MainMenuController implements Initializable{
 
             Stage stage = (Stage)  ((javafx.scene.Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Create Account");
-            stage.setScene(new Scene(root, 500, 640));
+            stage.setScene(new Scene(root));
+            stage.setWidth(500);
+            stage.setHeight(640);
             stage.show();
 
         } catch(IOException e){
             e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void handleProfileBTN(ActionEvent event){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SakuraDBApplication.class.getResource(
+                    "/edu/utsa/cs3743/sakuraapplication/FXML/Profile.fxml"));
+            Parent root = fxmlLoader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle("SakuraDB");
+            stage.setScene(new Scene(root));
+            stage.setWidth(520);
+            stage.setHeight(650);
+            stage.show();
+        }catch(Exception e){
+            System.out.println("File Not Found");
         }
     }
 }
