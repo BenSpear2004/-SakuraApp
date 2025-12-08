@@ -1,0 +1,75 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom, #FFB7C5, #000000);
+    -fx-background-radius: 8;
+}
+
+
+.ProfileInformation{
+    -fx-text-fill: #CCCCCC;
+    -fx-font-family: "Open Sans";
+    -fx-font-size: 13;
+    -fx-border-color: #000000;
+    -fx-border-width: 0 0 1 0;
+}
+
+.ProfileLabels{
+    -fx-text-fill: #CCCCCC;
+    -fx-font-family: "Open Sans";
+    -fx-font-size: 12;
+}
+
+.ProfileDetails{
+    -fx-text-fill: #CCCCCC;
+    -fx-font-family: "Open Sans";
+    -fx-font-size: 13;
+
+}
+
+.ProfileDetails{
+    -fx-text-fill: #CCCCCC;
+    -fx-font-family: "Open Sans";
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 0 0 1 0;
+}
+
+.MenuAnchor{
+    -fx-border-color: black;
+    -fx-border-width: 0 1 0 0;
+}
+
+
+
+.CartBTN{
+    -fx-text-fill: #CCCCCC;
+    -fx-background-color: black;
+    -fx-background-radius: 10;
+}
+
+.CartBTN:hover{
+    -fx-effect: dropshadow(gaussian, rgba(204,204,204,0.5), 10, 0.5, 0, 3);
+    -fx-background-color: rgba(204,204,204, 0.4);
+}
+
+.MainMenuBTN{
+    -fx-text-fill: #CCCCCC;
+    -fx-background-color: black;
+    -fx-background-radius: 10;
+}
+
+.MainMenuBTN:hover{
+    -fx-effect: dropshadow(gaussian, rgba(204,204,204,0.5), 10, 0.5, 0, 3);
+    -fx-background-color: rgba(204,204,204, 0.4);
+}
+
+.SignOutBTN{
+    -fx-text-fill: #CCCCCC;
+    -fx-background-color: black;
+    -fx-background-radius: 10;
+}
+
+.SignOutBTN:hover{
+    -fx-effect: dropshadow(gaussian, rgba(204,204,204,0.5), 10, 0.5, 0, 3);
+    -fx-background-color: rgba(204,204,204, 0.4);
+}
