@@ -52,8 +52,8 @@ public class LoginScreenController {
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setTitle("SakuraDB");
                 stage.setScene(new Scene(root));
-                stage.setWidth(454);
-                stage.setHeight(655);
+                stage.setWidth(970);
+                stage.setHeight(700);
                 stage.show();
 
             } else {
@@ -76,6 +76,8 @@ public class LoginScreenController {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Create Account");
             stage.setScene(new Scene(root));
+            stage.setWidth(320);
+            stage.setHeight(530);
             stage.show();
 
         } catch (IOException e) {

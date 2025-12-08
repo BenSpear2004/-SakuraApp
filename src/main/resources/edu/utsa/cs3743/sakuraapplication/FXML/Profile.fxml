@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="634.0" prefWidth="518.0" stylesheets="@../CSS/Profile.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3743.sakuraapplication.Controller.ProfileController">
+    <children>
+        <ImageView fitHeight="111.0" fitWidth="136.0" layoutX="-1.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Image/logo.png" />
+            </image>
+        </ImageView>
+        <VBox alignment="TOP_CENTER" layoutX="135.0" layoutY="2.0" prefHeight="632.0" prefWidth="382.0" spacing="20.0">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                    <image>
+                        <Image url="@../Images/ProfileDefault.jpg" />
+                    </image>
+                </ImageView>
+                <Label prefHeight="19.0" prefWidth="291.0" styleClass="ProfileDetails" text="Profile Details">
+                    <padding>
+                        <Insets right="190.0" />
+                    </padding>
+                </Label>
+                <HBox alignment="CENTER" prefHeight="42.0" prefWidth="382.0" spacing="100.0">
+                    <children>
+                        <Label prefWidth="57.0" styleClass="ProfileLabels" text="Username" />
+                        <Label fx:id="UsernameLabel" prefWidth="129.0" styleClass="ProfileInformation" text="Label" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="42.0" prefWidth="382.0" spacing="100.0">
+                    <children>
+                        <Label prefWidth="57.0" styleClass="ProfileLabels" text="Email" />
+                        <Label fx:id="EmailLabel" prefHeight="18.0" prefWidth="129.0" styleClass="ProfileInformation" text="Label" />
+                    </children>
+                </HBox>
+            <Button fx:id="SignOutBtn" mnemonicParsing="false" onAction="#handleSignOutBtn" styleClass="SignOutBTN" text="Sing out">
+               <VBox.margin>
+                  <Insets left="200.0" />
+               </VBox.margin>
+            </Button>
+            </children>
+        </VBox>
+      <AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="632.0" prefWidth="146.0" styleClass="MenuAnchor">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="85.0" layoutX="31.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/SakuraLogo2.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="MainMenuBTN" layoutX="35.0" layoutY="166.0" mnemonicParsing="false" onAction="#handleMainMenuBTN" styleClass="MainMenuBTN" text="MainMenu" />
+            <Label layoutX="18.0" layoutY="130.0" text="Navigation" />
+            <Button fx:id="CartBTN" layoutX="35.0" layoutY="211.0" mnemonicParsing="false" onAction="#handleCartBTN" prefHeight="26.0" prefWidth="74.0" styleClass="CartBTN" text="Cart" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
