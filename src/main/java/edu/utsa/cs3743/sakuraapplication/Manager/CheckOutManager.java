@@ -3,10 +3,7 @@ package edu.utsa.cs3743.sakuraapplication.Manager;
 import edu.utsa.cs3743.sakuraapplication.Model.CartItem;
 
 import java.math.BigDecimal;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.List;
 
 public class CheckOutManager {
@@ -75,4 +72,24 @@ public class CheckOutManager {
             stmt.executeUpdate();
         }
     }
+
+    public int createOrFetchCustomer(String firstName, String lastName, String email, String phone) throws SQLException {
+        String sql = "{ CALL sp_checkout_create_customer(?, ?, ?, ?, ?) }";
+
+        try (CallableStatement stmt = connection.prepareCall(sql)) {
+
+            stmt.setString(1, firstName);
+            stmt.setString(2, lastName);
+            stmt.setString(3, email);
+            stmt.setString(4, phone);
+
+            // OUT parameter from the procedure
+            stmt.registerOutParameter(5, java.sql.Types.INTEGER);
+
+            stmt.execute();
+
+            return stmt.getInt(5);
+        }
+    }
+
 }
