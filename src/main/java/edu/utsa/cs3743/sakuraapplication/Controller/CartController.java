@@ -25,6 +25,10 @@ public class CartController {
     @FXML
     private Label priceLabel;
 
+    public void initialize() {
+        loadCartItems();
+    }
+
     @FXML
     public void handleHomeButton(ActionEvent event){
         try {
