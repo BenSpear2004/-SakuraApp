@@ -7,19 +7,19 @@
     -fx-font-family: "Open Sans";
     -fx-font-size: 14px;
     -fx-font-weight: bold;
-    -fx-text-fill: #888888;
+    -fx-text-fill: #CCCCCC;
 }
 
 .CategoryLabel {
     -fx-font-family: "Open Sans";
     -fx-font-size: 12px;
-    -fx-text-fill: #888888;
+    -fx-text-fill: #CCCCCC;
 }
 
 .PriceLabel {
     -fx-font-family: "Open Sans";
     -fx-font-size: 10px;
-    -fx-text-fill: #888888;
+    -fx-text-fill: #CCCCCC;
 }
 
 .MenuItemRoot:hover{

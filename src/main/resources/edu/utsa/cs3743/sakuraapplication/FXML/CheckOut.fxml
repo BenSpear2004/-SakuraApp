@@ -26,7 +26,7 @@
             <TextField fx:id="dateText" maxWidth="315.0" promptText="Enter EXP Data MM/YY" styleClass="Csv" />
             <TextField fx:id="csvText" maxWidth="315.0" promptText="Enter CSV" styleClass="ExpDate" />
             <Button mnemonicParsing="false" onAction="#handlePayButton" prefHeight="26.0" prefWidth="112.0" styleClass="PayBTN" text="PAY" />
-            <Label fx:id="errorLabel" alignment="CENTER" prefHeight="17.0" prefWidth="300.0" />
+            <Label fx:id="errorLabel" alignment="CENTER" prefHeight="17.0" prefWidth="300.0" styleClass="InfoLabel" />
         </children>
     </VBox>
 </AnchorPane>
